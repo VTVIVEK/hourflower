@@ -1,20 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-/*
-session_unset();
-session_destroy();
-$error="";
 
-if(array_key_exists("logout",$_GET)){
-//if(array_key_exists($_GET['Logout'])){
-  unset($_SESSION);
-  setcookie("id", "", time() - 60*60);
-  $_COOKIE["id"] = ""; 
-}
-else if((array_key_exists("id",$_SESSION) AND $_SESSION["id"]) OR (array_key_exists("id",$_COOKIE) AND $_COOKIE["id"])){
-  header("Location:loggedinpage.php");
-}*/
 if((array_key_exists("id",$_SESSION) AND $_SESSION["id"]) OR (array_key_exists("id",$_COOKIE) AND $_COOKIE["id"])){
   header("Location:index.php");}
 
